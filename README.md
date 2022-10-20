@@ -20,9 +20,7 @@ Developed by:V DHARSHAN
 RegisterNumber: 22003103
  
  import numpy as np
-
 # Preprocessing Input data
-
 X = np.array(eval(input()))
 Y = np.array(eval(input()))
 X_mean=np.mean(X)
@@ -37,12 +35,12 @@ b=Y_mean-m*(X_mean)
 print (m, b)
 Y_pred=m*X+b
 print (Y_pred)
-
-
 ```
 
 ## Output
 ![output](/Univariatelinear.png)
+
 ![output](/lineplot.png)
+
 ## Result
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares.
