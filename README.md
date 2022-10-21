@@ -19,22 +19,38 @@ Program for Univariate linear regression using the least squares method.
 Developed by:V DHARSHAN
 RegisterNumber: 22003103
  
- import numpy as np
+import numpy as np
+
 # Preprocessing Input data
+
 X = np.array(eval(input()))
 Y = np.array(eval(input()))
+
+# Building the model
+# write your code here
 X_mean=np.mean(X)
 Y_mean=np.mean(Y)
-num=0
-denom=0
+
+num = 0
+denom = 0
+
 for i in range(len(X)):
-    num+=(X[i]-X_mean)*(Y[i]-Y_mean)
-    denom+=(X[i]-X_mean)**2
-m=num/denom
-b=Y_mean-m*(X_mean)
-print (m, b)
-Y_pred=m*X+b
-print (Y_pred)
+    num += (X[i]-X_mean)*(Y[i]-Y_mean)
+    denom += (X[i]-X_mean)**2
+    
+m = num/denom
+
+c = Y_mean - m*X_mean
+print (m, c)
+
+#Predict the output
+Y_mean = m*X+c
+print (Y_mean)
+
+import matplotlib.pyplot as plt
+plt.scatter(X,Y)
+plt.plot(X,Y_pred,color="purple")
+plt.show()
 ```
 
 ## Output
